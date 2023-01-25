@@ -3,27 +3,46 @@
 ## AIM
 To develop a Django application to store and retrieve data from a database using Object Relational Mapping(ORM).
 
-## Entity Relationship Diagram
-
-Include your ER diagram here
-
 ## DESIGN STEPS
 
 ### STEP 1:
-
+HTML content creation
 ### STEP 2:
-
+Design of webserver workflow
 ### STEP 3:
-
-Write your own steps
-
+Implementation using Python code
+### Step 4:
+Serving the HTML pages.
+### Step 5:
+Testing the webserver
 ## PROGRAM
+```
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
+<!DOCTYPE html>
+<html>
+<head>
+<title>My webserver</title>
+</head>
+<body>
+<h1>Welcome<h1>
+</body>
+</html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',80)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
+```
+## OUTPUT:
+![OUTPUT](./luffysk.png)
 
-Include your code here
-
-## OUTPUT
-
-Include the screenshot of your admin page.
-
-
-## RESULT
+## RESULT:
+program is executed
