@@ -45,4 +45,4 @@ httpd.serve_forever()
 ![OUTPUT](./luffysk.png)
 
 ## RESULT:
-program has been executed successfully.
+program is executed.
