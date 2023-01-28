@@ -1,7 +1,7 @@
 # Developing a Simple Webserver
 
 ## AIM
-To develop a Django application to store and retrieve data from a database using Object Relational Mapping(ORM).
+To develop a simple webserver to serve html pages.
 
 ## DESIGN STEPS
 
@@ -45,4 +45,4 @@ httpd.serve_forever()
 ![OUTPUT](./luffysk.png)
 
 ## RESULT:
-program is executed
+program has been executed successfully.
